@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs do jeito ninja!</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <ul>
+            <li v-for= "(item, index) in linguagens">{{index}}-{{item.nome}}</li> <!--percorre o array  e imprime index e nome -->
+        </ul>
+    </div>
+
+    <script src="https:/unpkg.com/vue"></script>
+ 
+    <script>
+        var app = new Vue({ //instância do Vuejs
+            el:"#app",       //difine o elemento pai do aplicativo
+            data:{          //onde estarão as variaveis
+                titulo:"Vuejs do jeito ninja!",
+                linguagens:[ //array
+                    {nome: "JS"},
+                    {nome: "PHP"},
+                    {nome: "JAVA"},
+                    {nome: "C"},
+                ]
+            }
+        });
+    </script>
+</body>
+</html> 
