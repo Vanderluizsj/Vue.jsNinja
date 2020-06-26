@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue do jeito ninja!</title>
+    <style>
+        .red{
+            color: rgba(66, 8, 8, 0.808);
+        }
+        .green{
+            color: rgba(4, 78, 4, 0.829);
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <img v-bind:src="imagem" v-bind:alt="alt">
+        <br>
+        <p v-bind:class="color">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odio, aut consectetur harum quaerat quasi ducimus, deleniti aperiam fugiat nisi mollitia beatae repudiandae omnis hic. Enim non deserunt cum laboriosam.
+        </p>
+        
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                titulo:"Vue do jeito ninja!",
+                imagem:"imagens/vue.js logo dark.png",
+                alt:"Logo Vue.js",
+                color:"green"
+            }
+        });
+    </script>
+</body>
+</html>
