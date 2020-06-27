@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue do jeito ninja!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+</head>
+<body>
+   
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <form action="http://google.com">
+            <!--Ao clicar em enviar será disparado o evento do v-on:click mostrando a msg e seremos direcionados para o google-->
+             <button type="submit" class="btn btn-outline-primary" v-on:click="enviar()">Enviar</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                titulo:"Vue do jeito ninja!",               
+            },
+            methods:{
+                enviar(){
+                    alert('Enviado!');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
